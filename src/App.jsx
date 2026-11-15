@@ -8,13 +8,17 @@ import Stats from "./Stats.jsx";
 import { START, incrementAt, decrementAt, zeros } from "./matrix.js";
 
 export default function App() {
-  // Section 07: Store the matrix in React state.
   const [matrix, setMatrix] = useState(START);
+
+  // Section 08: Increase the clicked cell by one.
+  function increment(row, col) {
+    setMatrix(incrementAt(matrix, row, col));
+  }
 
   return (
     <main className="app">
       <Header />
-      <Matrix matrix={matrix} />
+      <Matrix matrix={matrix} onIncrement={increment} />
     </main>
   );
 }
