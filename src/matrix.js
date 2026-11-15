@@ -1,11 +1,12 @@
 
+// Initial matrix
 export const START = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
 
-// Section 08: Increase one cell by 1.
+// Section 08: Increment one cell without modifying the original matrix.
 export function incrementAt(matrix, row, col) {
   return matrix.map((values, r) =>
     r === row
@@ -14,7 +15,7 @@ export function incrementAt(matrix, row, col) {
   );
 }
 
-// Section 09: Calculate statistics from the matrix.
+// Section 09: Calculate statistics.
 export function stats(matrix) {
   const values = matrix.flat();
 
@@ -38,12 +39,12 @@ export function stats(matrix) {
   return { sum, average, max, nonZero };
 }
 
-// Section 12: Create a matrix with the same shape, filled with zeros.
+// Section 12: Leave for later.
 export function zeros(matrix) {
   throw new Error("TODO");
 }
 
-// IN-LAB TASK: Leave this unchanged.
+// IN-LAB TASK: Leave unchanged.
 export function decrementAt(matrix, row, col) {
   throw new Error("TODO");
 }

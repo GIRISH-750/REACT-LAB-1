@@ -10,7 +10,7 @@ import { START, incrementAt, decrementAt, zeros } from "./matrix.js";
 export default function App() {
   const [matrix, setMatrix] = useState(START);
 
-  // Section 08: Increase the clicked cell by one.
+  // Section 08: Handle cell clicks.
   function increment(row, col) {
     setMatrix(incrementAt(matrix, row, col));
   }
@@ -19,7 +19,7 @@ export default function App() {
     <main className="app">
       <Header />
 
-      <div className="workspace">
+      <div className="board">
         <Matrix matrix={matrix} onIncrement={increment} />
         <Stats matrix={matrix} />
       </div>
